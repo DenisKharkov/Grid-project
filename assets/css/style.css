@@ -908,14 +908,10 @@ margin-top: 20px;
   {
     display: block;
   }
-  .header-navbar__list {
-    display: none;
-  }
   .header-navbar {
     z-index: 2;
   }
   .header-navbar__list.open {
-    
     position: absolute;
     z-index: -100;
     right: 20px;
