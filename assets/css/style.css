@@ -540,6 +540,10 @@ h2 {
   color: #2d3651;
 }
 
+h3 {
+    color: #637588;
+}
+
 p {
 letter-spacing: 1px;
 color: #637588;
@@ -802,7 +806,6 @@ margin-top: 20px;
 
 .form .container {
     grid-template-columns: repeat(3, 1fr);
-    /*grid-template-columns: 1fr 1fr;*/ 
     grid-gap: 20px;
 }
 
@@ -822,10 +825,6 @@ margin-top: 20px;
     border-color: #ffffff;
     background-color: #d66926;
 }
-/*.form .form-item:hover,
-.form .form-item:focus {
-    color: #ffffff;
-}*/
 
 .form input {
     width: 100%;
@@ -840,6 +839,62 @@ margin-top: 20px;
     font-size: 1.125rem;
 }
 /*конец описания свойства форм*/
+
+
+/*начало описания свойств раздела ПОСТОВ*/
+
+.posts h2 {
+	margin-bottom: 30px;
+    grid-column: 1 / span 4;
+}
+.posts .container {
+	grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.posts-article:nth-of-type(1) {
+        grid-column: 1 / span 2;
+}
+.posts-article:nth-of-type(6) {
+        grid-column: 3 / span 2;
+}
+.posts-article__image {
+    position: relative;
+    overflow: hidden;
+}
+.posts-article__image div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+}
+.posts-article a {
+    display: grid;
+    overflow: hidden;
+    height: 100%;
+    grid-template-rows: 300px 1fr;
+}
+.posts-article__text {
+    display: grid;
+    padding: 20px;
+    align-content: center;
+}
+.posts-article {
+    background-color: #f2f2f2;
+}
+.posts-article:hover {
+    background-color: #d8d8d8;
+}
+
+.posts-article__text h3, p {
+    text-align: center;
+}
+
+
+
+
+
 
 /* начало блока описания "гамбургера"*/
 
