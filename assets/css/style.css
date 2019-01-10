@@ -891,8 +891,11 @@ margin-top: 20px;
     text-align: center;
 }
 
-
-
+.posts .btn-set {
+	display: grid;
+	justify-items: center;
+	margin-bottom: 200px;
+}
 
 
 
