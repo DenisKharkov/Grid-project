@@ -844,18 +844,19 @@ margin-top: 20px;
 /*начало описания свойств раздела ПОСТОВ*/
 
 .posts h2 {
-	margin-bottom: 30px;
+  	margin-bottom: 30px;
     grid-column: 1 / span 4;
 }
 .posts .container {
-	grid-template-columns: repeat(4, 1fr);
+  	grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    max-height: 1450px;
 }
 .posts-article:nth-of-type(1) {
-        grid-column: 1 / span 2;
+    grid-column: 1 / span 2;
 }
 .posts-article:nth-of-type(6) {
-        grid-column: 3 / span 2;
+    grid-column: 3 / span 2;
 }
 .posts-article__image {
     position: relative;
@@ -1023,7 +1024,7 @@ margin-top: 20px;
     z-index: 100;
     right: 20px;
     width: auto;
-    top: 150%;
+    top: 100%;
     grid-template-columns: auto;
     text-align: right;
     background-color: rgba(68, 89, 110, 0.95);
@@ -1083,6 +1084,53 @@ margin-top: 20px;
   }
 }
 
-  
-  
-  
+
+/* начало описания футера*/
+
+.footer {
+  padding: 50px;
+  text-align: center;
+  background-color: #1b2030;
+}
+
+.container {
+  position: relative;
+}
+
+.footer .container {
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  position: relative;
+  font-size: 30px;  
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.footer-social::after {
+  position: absolute;
+  left: calc(50% - 102px);
+  width: 80px;
+  height: 2px;
+  content: "";
+  margin: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-text {
+  display: inline-block;
+  text-align: justify;
+}
+
+.footer-text span:nth-of-type(1) {
+  font-weight: 100;
+  letter-spacing: 6px;
+}
+
+.footer-text span:nth-of-type(2) {
+  color: #e5e5e5;
+  font-weight: 700;
+}
+
+/*Конец описания футера*/
