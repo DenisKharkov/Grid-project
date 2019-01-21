@@ -555,6 +555,7 @@ color: #637588;
   max-width: 1340px;
   margin: auto;
   padding: 0 20px;
+  overflow: hidden;
   }
 
   .btn,.btn-accent {
@@ -895,7 +896,7 @@ margin-top: 20px;
 .posts .btn-set {
 	display: grid;
 	justify-items: center;
-	margin-bottom: 200px;
+	margin-bottom: 100px;
 }
 
 
@@ -1047,6 +1048,13 @@ margin-top: 20px;
 
 /*описание поведения колонок секции "skills" при сжатии менее 992 пикселя*/
 @media (max-width: 992px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+  h2 {
+      font-size: 2rem;
+  }
+
   .skills {
     grid-template-columns: repeat(3, 33.33%);
   }
@@ -1134,3 +1142,41 @@ margin-top: 20px;
 }
 
 /*Конец описания футера*/
+
+
+/*описание поведения колонок секции "posts" при сжатии менее 992 пикселя*/
+@media (max-width: 992px) {
+  
+  
+  .posts .btn-set {
+    grid-column: 1 / span 3;
+  }
+  
+  .posts .container {
+   grid-template-columns: repeat(3, 33.33%);
+   overflow: auto;
+  }
+
+  .posts-article__text {
+    max-height: 250px;
+    overflow: hidden;
+  }
+  
+  .posts-article:nth-of-type(1) {
+    grid-column: 1 / span 2;
+  }
+  .posts-article:nth-of-type(3) {
+    grid-row: 3;
+  }
+  .posts-article:nth-of-type(4) {
+    grid-row: 3;
+    grid-column: 2 / span 2;
+  }
+  .posts-article:nth-of-type(5) {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+  
+  
+
+}
