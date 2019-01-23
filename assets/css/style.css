@@ -691,7 +691,6 @@ color: #637588;
   min-height: calc(33.33vh - 14px); 
   display: grid;
   position: relative;
-  padding: 20px;
   cursor: pointer;
   align-items: center;
   justify-items:center;
@@ -851,7 +850,6 @@ margin-top: 20px;
 .posts .container {
   	grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    max-height: 1450px;
 }
 .posts-article:nth-of-type(1) {
     grid-column: 1 / span 2;
@@ -895,7 +893,7 @@ margin-top: 20px;
 
 .posts .btn-set {
 	display: grid;
-	justify-items: center;
+  justify-items: center;
 	margin-bottom: 100px;
 }
 
@@ -1021,7 +1019,6 @@ margin-top: 20px;
   }
   .header-navbar__list.open {
     display: block;
-    position: absolute;
     z-index: 100;
     right: 20px;
     width: auto;
@@ -1047,7 +1044,7 @@ margin-top: 20px;
 /*конец части всплывающего меню гамбургера*/
 
 /*описание поведения колонок секции "skills" при сжатии менее 992 пикселя*/
-@media (max-width: 992px) {
+@media (max-width: 992px) and (min-width: 769px) {
   h1 {
       font-size: 2.5rem;
   }
@@ -1075,23 +1072,26 @@ margin-top: 20px;
     grid-column: 1 / span 2;
   }
   .skill-item:nth-of-type(6) {
-  grid-column: 3;
-  grid-row: 3 / span 2;
+    grid-column: 3;
+    grid-row: 3 / span 2;
   }
   .skill-item:nth-of-type(7) {
-  grid-column: 1;
-  grid-row: 4 / span 2;
+    grid-column: 1;
+    grid-row: 4 / span 2;
   }
   .skill-item:nth-of-type(8) {
-  grid-column: 2;
-  grid-row: 4;
+    grid-column: 2;
+    grid-row: 4;
   }
   .skill-item:nth-of-type(9) {
-  grid-column: 2 / span 2;
-  grid-row: 5;
+    grid-column: 2 / span 2;
+    grid-row: 5;
+  }
+
+  .posts .container {
+    max-height: none;
   }
 }
-
 
 /* начало описания футера*/
 
@@ -1099,14 +1099,7 @@ margin-top: 20px;
   padding: 50px;
   text-align: center;
   background-color: #1b2030;
-}
-
-.container {
-  position: relative;
-}
-
-.footer .container {
-  margin-bottom: 20px;
+  
 }
 
 .footer-social {
@@ -1145,9 +1138,8 @@ margin-top: 20px;
 
 
 /*описание поведения колонок секции "posts" при сжатии менее 992 пикселя*/
-@media (max-width: 992px) {
-  
-  
+@media (max-width: 992px) (min-width: 769px) {
+    
   .posts .btn-set {
     grid-column: 1 / span 3;
   }
@@ -1165,18 +1157,122 @@ margin-top: 20px;
   .posts-article:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
+
   .posts-article:nth-of-type(3) {
     grid-row: 3;
   }
+
   .posts-article:nth-of-type(4) {
     grid-row: 3;
     grid-column: 2 / span 2;
   }
+
   .posts-article:nth-of-type(5) {
     grid-row: 4;
     grid-column: 1 / span 2;
+  } 
+  
+  .posts .container {
+    max-height: none;
+  }
+}
+
+/*адаптация под 768px*/
+
+@media (max-width: 768px) and (min-width: 577px) {
+  
+  h1 {
+    font-size: 1.875rem;
   }
   
+  h2 {
+    font-size: 1.5rem;
+  }
   
+  .section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  
+  .header-title {
+    margin: 0 0 43px;
+  }
 
+  .skills {
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .skill-item {
+    min-height: 250px;
+  }
+
+  .skill-item:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .skill-item:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .skill-item:nth-of-type(4) {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  }
+
+  .skill-item:nth-of-type(5) {
+    grid-row: 4 / span 2;
+    grid-column: 1;
+  }
+
+  .skill-item:nth-of-type(6) {
+    grid-row: 4;
+    grid-column: 2;
+  }
+
+  .skill-item:nth-of-type(7) {
+    grid-row: 5;
+    grid-column: 2;
+  }
+
+  .skill-item:nth-of-type(8) {
+    grid-row: 6;
+  }
+  
+  .skill-item:nth-of-type(9) {
+    grid-row: 6;
+  }
+  
+  .form .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form .form-item:nth-of-type(1) {
+    grid-column: 1 / span 2;
+  }
+  
+  .posts .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .posts-article:nth-of-type(odd) {
+    grid-column: 1;
+  }
+
+  .posts-article:nth-of-type(even) {
+    grid-column: 2;
+  }
+  
+  .posts .container {
+    max-height: none;
+  }
+
+
+
+
+
+
+  
 }
