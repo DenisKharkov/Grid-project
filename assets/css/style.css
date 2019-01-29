@@ -676,7 +676,8 @@ color: #637588;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding-top: 10px;
-  grid-gap: 10px;  
+  grid-gap: 10px;
+  margin: 0 10px 0 10px;
 }
 
 .skill-item:nth-of-type(1) {
@@ -755,9 +756,9 @@ transform: scale(1.1);
   background-color: #d66926;
 }
 .skills .btn-set {
-  padding: 10px 0 30px;
   display: grid;
   justify-items: center;
+  margin: 10px 0 40px 0;
 }
 .about {
   background-color: #e5e5e5;
@@ -787,6 +788,9 @@ margin-top: 20px;
 }
 .about-content p {
   font-size: 1.125rem;
+  text-align: left;
+  font-size: 18;
+
 }
 .about-content p:first-of-type {
   position: relative;
@@ -841,13 +845,21 @@ margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
 }
+
+.form input:hover,
+.form input:focus {
+    border-color: #707070;
+    border-bottom-color: #ffffff;
+    background-color: #4C546B;
+}
+
 /*конец описания свойства форм*/
 
 
 /*начало описания свойств раздела ПОСТОВ*/
 
 .posts h2 {
-  	margin-bottom: 30px;
+  	margin: 110px 0 60px 0;
     grid-column: 1 / span 4;
 }
 .posts .container {
@@ -1104,18 +1116,18 @@ margin-top: 20px;
 
 .footer-social {
   position: relative;
-  font-size: 30px;  
+  font-size: 36px;  
   letter-spacing: 5px;
   margin-bottom: 55px;
 }
 
 .footer-social::after {
   position: absolute;
-  left: calc(50% - 102px);
+  left: calc(50% - 112px);
   width: 80px;
   height: 2px;
   content: "";
-  margin: 60px;
+  margin: 66px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
