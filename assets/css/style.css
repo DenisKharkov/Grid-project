@@ -701,6 +701,10 @@ color: #637588;
   overflow: hidden;
 }
 
+.skills h6 {
+ display: none;
+} 
+
 .skill-item__image {
   position: absolute;
   overflow: hidden;
@@ -816,6 +820,9 @@ margin-top: 20px;
     grid-gap: 20px;
 }
 
+.form h6 {
+  display: none;
+}
 
 .form .btn-accent {
     max-width: 400px;
@@ -1068,7 +1075,8 @@ margin-top: 20px;
   }
 
   .skills {
-    grid-template-columns: repeat(3, 33.33%);
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 0 10px;
   }
   .skill-item {
     min-height: 215px;
